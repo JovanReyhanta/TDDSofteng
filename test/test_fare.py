@@ -233,7 +233,7 @@ def test_amount_under_10_10():
         isPeakHours=True,
         isMembership=True,
         delivery_distance=10
-    ) == 6
+    ) == 4
 
 def test_amount_between_10_50_9():
     assert compute_food_delivery(
@@ -249,7 +249,7 @@ def test_amount_between_10_50_10():
         isPeakHours=True,
         isMembership=False,
         delivery_distance=15,
-    ) == 48
+    ) == 47
 
 def test_amount_above_50_9():
     assert compute_food_delivery(

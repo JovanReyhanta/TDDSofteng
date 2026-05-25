@@ -14,4 +14,32 @@ def compute_food_delivery(
     isMembership,
     delivery_distance,
 ):
-    return
+    if delivery_distance > 20:
+        return -1
+    if amount_orders < 10:
+       amount_orders += 3
+       if isMembership == True:
+          return amount_orders
+       else:
+          if isPeakHours == True:
+            amount_orders += 2
+          else:
+             return amount_orders
+    elif amount_orders >= 10 and amount_orders <= 50 :
+       if isMembership == True:
+        return amount_orders
+       else:
+          if isPeakHours == True:
+            amount_orders += 2
+          else:
+             return amount_orders
+    else: 
+       if amount_orders > 50:
+          if isMembership == True:
+            return amount_orders
+       else:
+          if isPeakHours == True:
+            return amount_orders
+          else:
+             return amount_orders
+    return amount_orders
